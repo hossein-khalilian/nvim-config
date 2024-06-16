@@ -48,6 +48,7 @@ return {
         "black", -- python formatter
         -- "pylint",
         "eslint_d",
+        "jedi-language-server",
       },
     })
   end,
