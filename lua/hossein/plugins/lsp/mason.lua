@@ -49,6 +49,7 @@ return {
         -- "pylint",
         "eslint_d",
         "jedi-language-server",
+        "gopls",
       },
     })
   end,
