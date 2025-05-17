@@ -21,3 +21,7 @@ nvm install node
 ```
 sudo apt install python3-venv
 ```
+
+```
+cd ~/.local/share/nvim/lazy/telescope-fzf-native.nvim && make && cd -
+```

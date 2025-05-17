@@ -46,10 +46,10 @@ return {
         "stylua", -- lua formatter
         "isort", -- python formatter
         "black", -- python formatter
-        -- "pylint",
+        "pyright",
         "eslint_d",
         "jedi-language-server",
-        "gopls",
+        -- "gopls",
       },
     })
   end,
