@@ -28,27 +28,26 @@ return {
       -- list of servers for mason to install
       ensure_installed = {
         -- "ts_ls",
-        "html",
-        "cssls",
-        "tailwindcss",
+        -- "html",
+        -- "cssls",
+        -- "tailwindcss",
         "svelte",
         "lua_ls",
         "graphql",
         "emmet_ls",
-        "prismals",
+        -- "prismals",
         "pyright",
       },
     })
 
     mason_tool_installer.setup({
       ensure_installed = {
-        "prettier", -- prettier formatter
-        "stylua", -- lua formatter
-        "isort", -- python formatter
+        -- "prettier", -- prettier formatter
+        -- "stylua", -- lua formatter
+        -- "isort", -- python formatter
         "black", -- python formatter
-        "pyright",
-        "eslint_d",
-        "jedi-language-server",
+        -- "eslint_d",
+        -- "jedi-language-server",
         -- "gopls",
       },
     })
