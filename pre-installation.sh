@@ -30,3 +30,5 @@ export NVM_DIR="$HOME/.nvm"
 
 # Install latest Node.js via NVM
 nvm install node
+
+cp ./.tmux.conf /home/$USER
