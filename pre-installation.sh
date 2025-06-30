@@ -32,3 +32,4 @@ export NVM_DIR="$HOME/.nvm"
 nvm install node
 
 cp ./.tmux.conf /home/$USER
+tmux source-file /home/$USER/.tmux.conf
