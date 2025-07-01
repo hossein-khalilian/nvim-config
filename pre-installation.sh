@@ -5,7 +5,7 @@ set -e
 
 # Update package list and install dependencies
 sudo apt update
-sudo apt install -y unzip ripgrep build-essential python3-venv curl wget xclip python3-virtualenv
+sudo apt install -y unzip ripgrep build-essential python3-venv curl wget xclip
 
 # Install Neovim
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
@@ -30,6 +30,3 @@ export NVM_DIR="$HOME/.nvm"
 
 # Install latest Node.js via NVM
 nvm install node
-
-cp ./.tmux.conf /home/$USER
-tmux source-file /home/$USER/.tmux.conf
