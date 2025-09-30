@@ -44,9 +44,9 @@ return {
       ensure_installed = {
         "prettier", -- prettier formatter
         -- "stylua", -- lua formatter
-        "isort", -- python formatter
-        "black", -- python formatter
-        -- "eslint_d",
+        "isort",    -- python formatter
+        "black",    -- python formatter
+        "eslint_d",
         -- "jedi-language-server",
         -- "gopls",
       },
