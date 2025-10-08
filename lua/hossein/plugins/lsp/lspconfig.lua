@@ -62,10 +62,10 @@ return {
           [vim.diagnostic.severity.INFO]  = " ",
         },
       },
-      virtual_text = true,
-      underline = true,
+      virtual_text = false,
+      underline = false,
       update_in_insert = false,
-      severity_sort = true,
+      severity_sort = false,
     })
   end,
 }
