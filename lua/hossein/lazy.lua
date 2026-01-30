@@ -19,5 +19,9 @@ require("lazy").setup({ { import = "hossein.plugins" }, { import = "hossein.plug
   change_detection = {
     notify = false,
   },
+  install = {
+    missing = true,
+    colorscheme = { "tokyonight" },
+  },
 })
 

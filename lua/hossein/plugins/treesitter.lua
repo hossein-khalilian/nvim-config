@@ -7,7 +7,10 @@ return {
   },
   config = function()
     -- import nvim-treesitter plugin
-    local treesitter = require("nvim-treesitter.configs")
+    local ok, treesitter = pcall(require, "nvim-treesitter.configs")
+    if not ok then
+      return
+    end
 
     -- configure treesitter
     treesitter.setup({ -- enable syntax highlighting
