@@ -30,3 +30,5 @@ export NVM_DIR="$HOME/.nvm"
 
 # Install latest Node.js via NVM
 nvm install node
+
+npm i -g yarn
