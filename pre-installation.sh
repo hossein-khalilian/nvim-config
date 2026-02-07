@@ -29,6 +29,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # Install latest Node.js via NVM
-nvm install node
+nvm install --lts
+nvm use --lts
 
 npm i -g yarn
