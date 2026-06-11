@@ -37,6 +37,7 @@ return {
         "emmet_ls",
         -- "prismals",
         "pyright",
+        "dockerls",
       },
     })
 
@@ -47,6 +48,7 @@ return {
         "isort",    -- python formatter
         "black",    -- python formatter
         "eslint_d",
+        "hadolint", -- dockerfile linter
         -- "jedi-language-server",
         -- "gopls",
       },
