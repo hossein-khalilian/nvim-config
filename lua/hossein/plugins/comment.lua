@@ -5,6 +5,11 @@ return {
     "JoosepAlviste/nvim-ts-context-commentstring",
   },
   config = function()
+    -- use the modern ts_context_commentstring setup instead of the
+    -- legacy auto-loaded module (avoids errors on Neovim 0.11+)
+    vim.g.skip_ts_context_commentstring_module = true
+    require("ts_context_commentstring").setup({ enable_autocmd = false })
+
     -- import comment plugin safely
     local comment = require("Comment")
 
