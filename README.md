@@ -9,6 +9,12 @@ sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 ```
 
+## Clipboard over SSH
+
+Remote Neovim sessions use OSC 52 to copy to the clipboard of the computer
+running the SSH terminal. The terminal must allow OSC 52 clipboard writes.
+X11 forwarding, `DISPLAY`, and Xvfb are not required.
+
 # Install node
 
 ```

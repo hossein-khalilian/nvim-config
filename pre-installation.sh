@@ -7,6 +7,10 @@ set -e
 sudo apt update
 sudo apt install -y unzip ripgrep build-essential python3-venv curl wget xclip fd-find
 
+# Neovim uses its built-in OSC 52 clipboard provider during SSH sessions.
+# xclip remains useful for local graphical sessions, but no X server/Xvfb is
+# needed for copying from remote Neovim to the client's clipboard.
+
 # Install Neovim
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
 sudo rm -rf /opt/nvim
