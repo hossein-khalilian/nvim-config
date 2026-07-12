@@ -11,10 +11,10 @@ export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
 ## Clipboard over SSH
 
-Remote Neovim sessions use a forwarded X11 display when available, allowing
-`xclip` on the remote machine to update the local clipboard. Without a
-forwarded `DISPLAY`, Neovim falls back to OSC 52; this requires a terminal that
-supports OSC 52 clipboard writes.
+Remote Neovim sessions use SSH X11 forwarding. With `ForwardX11 yes` enabled
+for the host, `xclip` on the remote machine updates the local X11 clipboard.
+Start tmux only after connecting so its environment contains the forwarded
+`DISPLAY` value.
 
 # Install node
 
