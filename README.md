@@ -11,9 +11,10 @@ export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
 ## Clipboard over SSH
 
-Remote Neovim sessions use OSC 52 to copy to the clipboard of the computer
-running the SSH terminal. The terminal must allow OSC 52 clipboard writes.
-X11 forwarding, `DISPLAY`, and Xvfb are not required.
+Remote Neovim sessions use a forwarded X11 display when available, allowing
+`xclip` on the remote machine to update the local clipboard. Without a
+forwarded `DISPLAY`, Neovim falls back to OSC 52; this requires a terminal that
+supports OSC 52 clipboard writes.
 
 # Install node
 

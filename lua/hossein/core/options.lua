@@ -32,7 +32,7 @@ opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or 
 -- Over SSH, xclip writes to the remote X server (if one exists), not to the
 -- machine running the terminal. OSC 52 asks the terminal to update its local
 -- clipboard instead.
-if vim.env.SSH_TTY or vim.env.SSH_CONNECTION then
+if (vim.env.SSH_TTY or vim.env.SSH_CONNECTION) and not vim.env.DISPLAY then
   local osc52 = require("vim.ui.clipboard.osc52")
 
   vim.g.clipboard = {

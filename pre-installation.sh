@@ -5,11 +5,19 @@ set -e
 
 # Update package list and install dependencies
 sudo apt update
-sudo apt install -y unzip ripgrep build-essential python3-venv curl wget xclip fd-find
+sudo apt install -y unzip ripgrep build-essential python3-venv curl wget xclip fd-find tmux
 
-# Neovim uses its built-in OSC 52 clipboard provider during SSH sessions.
-# xclip remains useful for local graphical sessions, but no X server/Xvfb is
-# needed for copying from remote Neovim to the client's clipboard.
+# Neovim uses xclip when SSH provides a forwarded DISPLAY and falls back to its
+# built-in OSC 52 provider otherwise. A server-side X server/Xvfb is not needed.
+
+# Allow applications inside tmux (including Neovim) to forward OSC 52
+# clipboard writes to a compatible terminal on the SSH client.
+if ! grep -q '^set -g set-clipboard on$' ~/.tmux.conf 2>/dev/null; then
+  printf '\n# Forward application clipboard writes to the client terminal.\nset -g set-clipboard on\n' >> ~/.tmux.conf
+fi
+
+# Apply the setting to an already-running tmux server when there is one.
+tmux source-file ~/.tmux.conf 2>/dev/null || true
 
 # Install Neovim
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
