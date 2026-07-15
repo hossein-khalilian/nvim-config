@@ -76,8 +76,11 @@ EOF
 
 configure_sshd_x11
 
-# Install Neovim
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+# Install Neovim. Pin to a specific release (matches the version the plugin
+# stack is tested against) instead of "latest" so a future breaking release
+# can't silently break the setup. Bump this when upgrading.
+NVIM_VERSION="v0.12.4"
+curl -LO "https://github.com/neovim/neovim/releases/download/${NVIM_VERSION}/nvim-linux-x86_64.tar.gz"
 sudo rm -rf /opt/nvim
 sudo mkdir -p /opt/nvim
 sudo tar -xzf nvim-linux-x86_64.tar.gz -C /opt/nvim --strip-components=1

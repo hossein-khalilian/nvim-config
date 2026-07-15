@@ -1,6 +1,10 @@
 return {
   { -- Highlight, edit, and navigate code
     "nvim-treesitter/nvim-treesitter",
+    -- telescope is pinned to branch "0.1.x", whose previewer calls the legacy
+    -- treesitter API (parsers.ft_to_lang). That API was removed from "main" but
+    -- still exists on "master", so stay on "master" to keep them compatible.
+    branch = "master",
     build = ":TSUpdate",
     opts = {
       ensure_installed = { "bash", "c", "diff", "html", "lua", "luadoc", "markdown", "vim", "vimdoc" },
