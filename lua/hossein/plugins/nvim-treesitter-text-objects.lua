@@ -4,6 +4,8 @@ return {
     -- telescope is pinned to branch "0.1.x", whose previewer calls the legacy
     -- treesitter API (parsers.ft_to_lang). That API was removed from "main" but
     -- still exists on "master", so stay on "master" to keep them compatible.
+    -- Note: this "master" branch supports only Neovim 0.10/0.11 (see its
+    -- README); pre-installation.sh must stay on a 0.11.x release accordingly.
     branch = "master",
     build = ":TSUpdate",
     opts = {

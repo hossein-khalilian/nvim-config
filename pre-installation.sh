@@ -79,7 +79,9 @@ configure_sshd_x11
 # Install Neovim. Pin to a specific release (matches the version the plugin
 # stack is tested against) instead of "latest" so a future breaking release
 # can't silently break the setup. Bump this when upgrading.
-NVIM_VERSION="v0.12.4"
+# Must be a 0.11.x release: nvim-treesitter's "master" branch (pinned in
+# lua/hossein/plugins/nvim-treesitter-text-objects.lua) does not support 0.12.
+NVIM_VERSION="v0.11.7"
 curl -LO "https://github.com/neovim/neovim/releases/download/${NVIM_VERSION}/nvim-linux-x86_64.tar.gz"
 sudo rm -rf /opt/nvim
 sudo mkdir -p /opt/nvim
