@@ -103,7 +103,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # Install latest Node.js via NVM
-nvm install --lts
-nvm use --lts
+nvm install 22
+nvm alias default 22
+nvm use 22
 
 echo "Neovim pre-installation finished successfully."
