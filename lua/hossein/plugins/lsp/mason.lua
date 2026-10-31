@@ -38,6 +38,7 @@ return {
         -- "prismals",
         "pyright",
         "dockerls",
+        "jdtls", -- java (needs JDK 21+ on PATH)
       },
     })
 
